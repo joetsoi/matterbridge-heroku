@@ -1,0 +1,26 @@
+[slack]
+[slack.myslack]
+Token="xoxb-123456789-aBeautifulBotToken"
+RemoteNickFormat="{BRIDGE} - @{NICK}"
+# this will maps threads from other bridges on slack threads
+PreserveThreading=true
+
+[telegram.mytelegram]
+#See https://core.telegram.org/bots#6-botfather 
+#and https://www.linkedin.com/pulse/telegram-bots-beginners-marco-frau
+Token="Yourtokenhere"
+RemoteNickFormat="({PROTOCOL}) {NICK} "
+MessageFormat="HTMLNick"
+
+[[gateway]]
+name="norsegateway"
+enable=true
+
+[[gateway.inout]]
+account="slack.myslack"
+channel="norse97"
+
+[[gateway.inout]]
+account="telegram.mytelegram"
+channel="-100542926380"
+
